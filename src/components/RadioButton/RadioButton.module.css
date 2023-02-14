@@ -1,0 +1,39 @@
+.input__radio {
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  height: 3rem;
+  min-width: 117px;
+
+  background-color: #00474b;
+  border-radius: 0.3125rem;
+}
+
+.input__radio:has(input[type="radio"]:checked) {
+  background-color: #26c2ae;
+}
+
+.input__radio:hover {
+  background-color: #9fe8df;
+}
+
+:is(.input__radio:has(input[type="radio"]:checked), .input__radio:hover) > .input__label {
+  color: #00474b;
+}
+
+.input__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.input__field {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  opacity: 0;
+  cursor: pointer;
+}

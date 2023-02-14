@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  display: grid;
+  place-items: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  min-width: 475px;
+
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  padding-block: 5rem;
+  gap: 5.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container__logo {
+  height: 3.375rem;
+  width: 5.4375rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tip__calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+
+  max-width: 60rem;
+
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5625rem;
+  box-shadow: 0 2rem 2.6875rem rgba(79, 166, 175, 0.200735);
+}
+
+@media (min-width: 40rem) {
+  .tip__calculator {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 70rem) {
+  .tip__calculator {
+    flex-direction: row;
+  }
+
+  .calculator__form {
+    width: 45%;
+  }
+
+  .calculator__result {
+    flex: 1 1 auto;
+  }
+}
+
+.calculator__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+
+  min-width: 20rem;
+}
+
+.calculator__result {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+
+  padding: 2.5rem 1.375rem 1.5rem;
+
+  background-color: #00474b;
+  border-radius: 0.9375rem;
+}
+
+@media (min-width: 70rem) {
+  .calculator__result {
+    padding: 2.5rem 2.5rem 1.5rem;
   }
 }

@@ -1,0 +1,23 @@
+.btn {
+  align-self: flex-end;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+
+  padding: 0.5625rem 0;
+  margin-top: auto;
+  width: 100%;
+
+  border: none;
+  border-radius: 0.3125rem;
+  color: #00474b;
+  line-height: 1.875rem;
+  background-color: #26c2ae;
+
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #0d686d;
+  opacity: 0.35;
+}

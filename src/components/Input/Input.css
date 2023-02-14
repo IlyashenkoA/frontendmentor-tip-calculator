@@ -1,0 +1,75 @@
+.input__control {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.input__control:has(:not(.input__icon)) > .input__field {
+  padding: 0 1rem;
+}
+
+.input__icon {
+  position: absolute;
+  left: 1rem;
+  z-index: 999;
+}
+
+.input__icon-dollar {
+  height: 1rem;
+  width: 0.625rem;
+  background: url("../../assets/icons/icon-dollar.svg") no-repeat center;
+}
+
+.input__icon-avatar {
+  height: 1rem;
+  width: 0.8125rem;
+  background: url("../../assets/icons/icon-avatar.svg") no-repeat center;
+}
+
+.input__field {
+  position: relative;
+  height: 2.75rem;
+  width: 100%;
+
+  background-color: #f3f9fa;
+  outline: none;
+
+  border: 0.125rem solid transparent;
+  border-radius: 0.3125rem;
+
+  padding: 0 1rem 0 2.25rem;
+}
+
+.input__field,
+.input__field::placeholder {
+  color: rgba(0, 71, 75, 0.35);
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.input__field,
+.input__field:focus::placeholder {
+  color: #00474b;
+}
+
+.input__field:hover,
+.input__field:focus {
+  cursor: pointer;
+  border-color: #26c2ae;
+}
+
+.input__field:focus::placeholder {
+  color: transparent;
+}
+
+.input__field:invalid {
+  border-color: #e17052;
+}
+
+.input__field::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/icons/icon-dollar.svg");
+}

@@ -1,0 +1,37 @@
+.result__item {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.result__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.result__title > h2 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.result__title > p {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  margin: 0;
+
+  color: #7f9d9f;
+}
+
+.result__money {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.9375rem;
+
+  color: #26c2ae;
+}
