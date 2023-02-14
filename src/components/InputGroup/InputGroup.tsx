@@ -1,7 +1,6 @@
 import { ChangeEvent, useState } from "react";
-import { Input } from "../Input/Input";
+import { InputProps } from "../Input/Input";
 import './InputGroup.css';
-
 interface InputGroupProps {
   label: string;
   placeholder: string;
@@ -10,9 +9,10 @@ interface InputGroupProps {
   value: string;
   pattern?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  render: ({ id, icon, placeholder, value, pattern, onChange, onInputChange }: InputProps) => React.ReactNode;
 }
 
-export const InputGroup = ({ label, placeholder, id, icon, value, pattern, onChange }: InputGroupProps) => {
+export const InputGroup = ({ label, placeholder, id, icon, value, pattern, onChange, render }: InputGroupProps) => {
   const [error, setError] = useState<boolean>(false);
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -33,15 +33,15 @@ export const InputGroup = ({ label, placeholder, id, icon, value, pattern, onCha
         <label className="input__label" htmlFor={label}>{label}</label>
         {error && <p className='input__error-message'>Can't be zero</p>}
       </div>
-      <Input
-        id={id}
-        icon={icon}
-        placeholder={placeholder}
-        value={value}
-        pattern={pattern}
-        onChange={onChange}
-        onInputChange={onInputChange}
-      />
+      {render({
+        id,
+        icon,
+        placeholder,
+        value,
+        pattern,
+        onChange,
+        onInputChange
+      })}
     </div>
   );
 };

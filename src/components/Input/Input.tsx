@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEventHandler, RefObject } from 'react';
 import './Input.css';
 
-interface InputProps {
+export interface InputProps {
   placeholder: string,
   icon?: 'dollar' | 'avatar',
   id: string;

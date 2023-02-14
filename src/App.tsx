@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import './App.css';
 import { Button } from './components/Button/Button';
+import { Input } from './components/Input/Input';
 import { InputGroup } from './components/InputGroup/InputGroup';
 import { RadioGroup } from './components/RadioGroup/RadioGroup';
 import { Result } from './components/Result/Result';
@@ -72,8 +73,37 @@ function App() {
             id='Bill'
             value={bill}
             onChange={onBillChange}
+            render={({ id, icon, placeholder, value, pattern, onChange, onInputChange }) => {
+              return (
+                <Input
+                  id={id}
+                  icon={icon}
+                  placeholder={placeholder}
+                  value={value}
+                  pattern={pattern}
+                  onChange={onChange}
+                  onInputChange={onInputChange}
+                />
+              );
+            }}
           />
-          <RadioGroup onChange={onTipChange} value={tip} />
+          <RadioGroup
+            onChange={onTipChange}
+            value={tip}
+            render={({ id, placeholder, inputRef, value, onFocus, onBlur, onChange }) => {
+              return (
+                <Input
+                  id={id}
+                  placeholder={placeholder}
+                  inputRef={inputRef}
+                  value={value}
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                />
+              );
+            }}
+          />
           <InputGroup
             label='Number of People'
             placeholder='0'
@@ -82,6 +112,19 @@ function App() {
             value={numberOfPeople}
             pattern='^[1-9]+[0-9]*'
             onChange={onPeopleChange}
+            render={({ id, icon, placeholder, value, pattern, onChange, onInputChange }) => {
+              return (
+                <Input
+                  id={id}
+                  icon={icon}
+                  placeholder={placeholder}
+                  value={value}
+                  pattern={pattern}
+                  onChange={onChange}
+                  onInputChange={onInputChange}
+                />
+              );
+            }}
           />
         </div>
         <div className='calculator__result'>
