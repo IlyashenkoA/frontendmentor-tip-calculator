@@ -12,7 +12,16 @@ interface InputGroupProps {
   render: ({ id, icon, placeholder, value, pattern, onChange, onInputChange }: InputProps) => React.ReactNode;
 }
 
-export const InputGroup = ({ label, placeholder, id, icon, value, pattern, onChange, render }: InputGroupProps) => {
+export const InputGroup = ({
+  label,
+  placeholder,
+  id,
+  icon,
+  value,
+  pattern,
+  onChange,
+  render
+}: InputGroupProps) => {
   const [error, setError] = useState<boolean>(false);
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {

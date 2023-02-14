@@ -7,6 +7,12 @@ interface IButtonProps {
 
 export const Button = ({ disabled, onClick }: IButtonProps) => {
   return (
-    <button className={styles.btn} onClick={onClick} disabled={disabled}>RESET</button>
+    <button
+      className={styles.btn}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      RESET
+    </button>
   );
 };
