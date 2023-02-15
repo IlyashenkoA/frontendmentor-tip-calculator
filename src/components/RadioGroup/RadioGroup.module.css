@@ -1,6 +1,6 @@
 .input__group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, repeat(9rem, 1fr));
   gap: 1rem;
 }
 
@@ -12,9 +12,4 @@
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
-}
-.input__fields > * {
-  width: 100%;
-  min-width: 8rem;
-  max-width: 12.3rem;
 }
