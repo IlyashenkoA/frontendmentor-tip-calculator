@@ -24,11 +24,12 @@ Tip calculator, an application to calculate the bill, depending on the tip, the 
 
 <br />
 
-<img src="https://i.ibb.co/N350bpy/2023-05-08-104755.png" />
+
+<img src="https://i.ibb.co/vHNx4pX/2023-05-08-105303.png" />
 
 <br />
 
-<img src="https://i.ibb.co/rf0TyCB/2023-05-08-104822.png" />
+<img src="https://i.ibb.co/N350bpy/2023-05-08-104755.png" />
 
 <br />
 
