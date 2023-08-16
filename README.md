@@ -16,14 +16,13 @@
 
 ## About The Project
 
-Tip calculator, an application to calculate the bill, depending on the tip, the number of people and the bill itself. As a result, the final amount and the amount for each person will be displayed.
+Introducing the Tip Calculator, a practical utility designed to simplify bill calculations. With this tool, effortlessly determine final amounts and individual contributions for any bill scenario. Tailor tip percentages, adjust the number of people, and input the bill amount to obtain precise results. Whether you're dining out, sharing costs, or planning an event, the Tip Calculator streamlines the process, providing accurate and hassle-free calculations with every use.
 
 <br />
 
 <img src="https://i.ibb.co/82MRj9d/2023-05-08-104737.png" />
 
 <br />
-
 
 <img src="https://i.ibb.co/vHNx4pX/2023-05-08-105303.png" />
 
